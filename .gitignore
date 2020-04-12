@@ -4,6 +4,7 @@
 # dependencies
 /node_modules
 
+
 # testing
 /coverage
 
@@ -28,3 +29,4 @@ pages.css
 .vscode/bookmarks.json
 
 package-lock.json
+/bin
