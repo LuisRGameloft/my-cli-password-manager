@@ -26,3 +26,5 @@ yarn-error.log*
 layout.css
 pages.css
 .vscode/bookmarks.json
+
+package-lock.json
