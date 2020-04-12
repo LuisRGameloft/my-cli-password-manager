@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Text, Color} from 'ink';
+import { Main } from './components/main'
 
 const App = ({ db }) => (
-	<Text>
-		Hello Whiso, <Color green>{db}</Color>
-	</Text>
+	<Main />
 );
 
 App.propTypes = {
