@@ -1,47 +1,23 @@
 {
-	"name": "my_cli_password_manager",
+	"name": "my-cli-password-manager",
 	"version": "0.0.0",
 	"license": "MIT",
-	"bin": "cli.js",
+	"bin": "./build/cli.js",
 	"engines": {
 		"node": ">=8"
 	},
 	"scripts": {
-		"test": "xo && ava"
+		"dev": "pastel dev",
+		"build": "pastel build",
+		"prepare": "pastel build"
 	},
 	"files": [
-		"cli.js",
-		"ui.js"
+		"build"
 	],
 	"dependencies": {
-		"import-jsx": "^4.0.0",
 		"ink": "^2.7.1",
-		"meow": "^6.1.0",
+		"pastel": "^1.0.3",
 		"prop-types": "^15.7.2",
 		"react": "^16.13.1"
-	},
-	"devDependencies": {
-		"@babel/preset-react": "^7.9.4",
-		"@babel/register": "^7.9.0",
-		"ava": "^3.6.0",
-		"chalk": "^4.0.0",
-		"eslint-config-xo-react": "^0.23.0",
-		"eslint-plugin-react": "^7.19.0",
-		"eslint-plugin-react-hooks": "^3.0.0",
-		"ink-testing-library": "^1.0.3",
-		"xo": "^0.29.0"
-	},
-	"ava": {
-		"require": [
-			"@babel/register"
-		]
-	},
-	"babel": {
-		"presets": [
-			"@babel/preset-react"
-		]
-	},
-	"xo": {
-		"extends": "xo-react"
 	}
 }
