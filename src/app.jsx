@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Main } from './components/main'
 
 const App = ({ db }) => (
-	<Main />
+	<Main database={db} />
 );
 
 App.propTypes = {
@@ -11,7 +11,7 @@ App.propTypes = {
 };
 
 App.defaultProps = {
-	db: 'Database testing'
+	db: 'none'
 };
 
 module.exports = App;

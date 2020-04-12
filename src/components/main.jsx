@@ -4,14 +4,13 @@ import { Color } from 'ink';
 export class Main extends Component {
 	constructor() {
 		super();
-
 		this.state = {
 			i: 0
 		};
 	}
 
 	render() {
-		return <Color green>{this.state.i} tests passed</Color>;
+		return <Color green>{this.state.i} {this.props.database} passed</Color>;
 	}
 
 	componentDidMount() {
