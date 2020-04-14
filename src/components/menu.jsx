@@ -1,42 +1,60 @@
-import React, {Component} from 'react';
-import { Color, Text } from 'ink';
+import React, { Component } from 'react';
+import { Color } from 'ink';
 import SelectInput from 'ink-select-input';
-import Box from 'ink-box';
 
 export class Menu extends Component {
 	constructor() {
 		super();
+		this.state = {
+			selection: 0
+		};
+		this.handleSelect = this.handleSelect.bind(this);
 	}
 
 	handleSelect(item) {
-		console.log(item);
+		if(item.value == 3) {
+			process.exit(0);
+		}
+		this.setState({ 
+			selection: item.value 
+		});
 	}
 
 	render() {
-		const items = [
-			{ 
-				label : 'Open Database' ,
-				value : 0
-			}, 
-			{
-				label : 'Create a new Database',
-				value : 1
-			},
-			{
-				label : 'Exit',
-				value : 2
+		switch(this.state.selection) {
+			// Render main menu
+			case 0: {
+				const items = [
+					{ 
+						label : 'Open Database' ,
+						value : 1
+					}, 
+					{
+						label : 'Create a new Database',
+						value : 2
+					},
+					{
+						label : 'Exit',
+						value : 3
+					}
+				];
+				return (
+					<SelectInput items={items} onSelect={this.handleSelect}/>
+				);
 			}
-		];
-		return (
-			<SelectInput items={items} onSelect={this.handleSelect}/>
-		);
+			case 1: {
+				return (
+					<Color green> Othercomponent </Color>
+				);
+			}
+		}
 	}
 
 	componentDidMount() {
-		
+		console.log("[MENU] Mounted");
 	}
 
 	componentWillUnmount() {
-		
+		console.log("[MENU] unMounted");
 	}
 }
