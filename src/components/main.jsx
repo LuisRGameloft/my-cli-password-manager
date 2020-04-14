@@ -13,7 +13,7 @@ export class Main extends Component {
 				<Menu /> 
 			);
 		}
-		return <Color green>{this.state.i} {this.props.database} passed</Color>;
+		return <Color green>{this.props.database} passed</Color>;
 	}
 
 	componentDidMount() {
